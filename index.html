@@ -59,33 +59,57 @@
             background: linear-gradient(135deg, var(--notion-green-bg), var(--notion-blue-bg));
             border-radius: 0 0 20px 20px;
             margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .logo-container {
-            max-width: 200px;
-            margin: 0 auto 20px;
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(68, 131, 97, 0.1),
+                rgba(51, 126, 169, 0.1));
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .site-title {
+            font-size: 4.5em;
+            font-weight: 800;
+            color: var(--notion-text);
+            margin: 0;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, 
+                var(--notion-green), 
+                var(--notion-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: 'Inter', sans-serif;
             transition: transform 0.3s ease;
         }
 
-        .logo-container:hover {
+        .site-title:hover {
             transform: scale(1.02);
-        }
-
-        .logo {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .header h1 {
-            display: none; /* Hide the text version since we have the logo */
         }
 
         .subtitle {
             font-style: italic;
             color: var(--notion-gray);
-            font-size: 1.2em;
-            margin-top: 10px;
+            font-size: 1.4em;
+            margin-top: 15px;
+            font-weight: 400;
+            opacity: 0.9;
         }
 
         .document-section {
@@ -307,6 +331,12 @@
             .container {
                 padding: 20px;
             }
+            .site-title {
+                font-size: 3em;
+            }
+            .subtitle {
+                font-size: 1.2em;
+            }
         }
 
         /* Notion-like interactive elements */
@@ -363,10 +393,10 @@
 
     <div class="document-content">
         <div class="header">
-            <div class="logo-container">
-                <img src="assets/hemp-squad-logo.png" alt="Hemp Squad Logo" class="logo">
+            <div class="header-content">
+                <h1 class="site-title">HEMP SQUAD</h1>
+                <p class="subtitle">Bringing Heaven to Earth</p>
             </div>
-            <p class="subtitle">Bringing Heaven to Earth</p>
         </div>
 
         <div class="container">
