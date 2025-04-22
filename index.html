@@ -4,56 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hemp Squad - Bringing Heaven to Earth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-green: #4CAF50;
-            --secondary-green: #81C784;
-            --light-green: #E8F5E9;
-            --dark-green: #2E7D32;
-            --earth-brown: #8D6E63;
-            --sky-blue: #E3F2FD;
-            --sun-yellow: #FFF3E0;
-            --text-dark: #333;
-            --text-light: #666;
+            --notion-bg: #ffffff;
+            --notion-text: #37352f;
+            --notion-gray: #787774;
+            --notion-brown: #9f6b53;
+            --notion-orange: #d9730d;
+            --notion-yellow: #cb912f;
+            --notion-green: #448361;
+            --notion-blue: #337ea9;
+            --notion-purple: #9065b0;
+            --notion-pink: #c14c8a;
+            --notion-red: #d44c47;
+            --notion-gray-bg: #f1f1ef;
+            --notion-brown-bg: #f3e9e2;
+            --notion-orange-bg: #f9e9d9;
+            --notion-yellow-bg: #f9f0d9;
+            --notion-green-bg: #e9f0ed;
+            --notion-blue-bg: #e9f0f4;
+            --notion-purple-bg: #f0e9f4;
+            --notion-pink-bg: #f9e9f4;
+            --notion-red-bg: #f9e9e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
-            max-width: 1200px;
+            color: var(--notion-text);
+            background-color: var(--notion-bg);
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
+            padding: 40px 20px;
         }
 
         .header {
             text-align: center;
-            padding: 40px 0;
-            background: linear-gradient(135deg, var(--light-green), var(--sky-blue));
-            border-radius: 15px;
-            margin-bottom: 30px;
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--notion-green-bg), var(--notion-blue-bg));
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 40px;
         }
 
         h1 {
             font-size: 3em;
-            color: var(--dark-green);
+            font-weight: 700;
+            color: var(--notion-text);
             margin: 0;
         }
 
         .subtitle {
             font-style: italic;
-            color: var(--text-light);
+            color: var(--notion-gray);
             font-size: 1.2em;
+            margin-top: 10px;
         }
 
-        .vision {
-            text-align: center;
-            padding: 20px;
-            background-color: white;
+        .document-section {
+            background: white;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             margin-bottom: 30px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--notion-text);
         }
 
         .team-grid {
@@ -64,15 +98,14 @@
         }
 
         .team-member {
-            background: white;
+            background: var(--notion-gray-bg);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
         }
 
         .team-member:hover {
-            transform: translateY(-5px);
+            transform: translateY(-2px);
         }
 
         .pillars {
@@ -83,11 +116,10 @@
         }
 
         .pillar {
-            background: white;
+            background: var(--notion-green-bg);
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 8px;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .tech-grid {
@@ -98,10 +130,9 @@
         }
 
         .tech-card {
-            background: white;
+            background: var(--notion-blue-bg);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
         }
 
         .timeline {
@@ -112,11 +143,10 @@
         }
 
         .phase {
-            background: white;
+            background: var(--notion-yellow-bg);
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 8px;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .values {
@@ -127,24 +157,23 @@
         }
 
         .value-tag {
-            background: var(--light-green);
+            background: var(--notion-purple-bg);
             padding: 8px 15px;
             border-radius: 20px;
             font-size: 0.9em;
         }
 
         .cta {
-            background: white;
+            background: var(--notion-pink-bg);
             padding: 40px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             margin: 30px 0;
         }
 
         .footer {
             text-align: center;
-            color: var(--text-light);
+            color: var(--notion-gray);
             font-size: 0.9em;
             margin-top: 40px;
         }
@@ -153,139 +182,207 @@
             .team-grid, .pillars, .tech-grid, .timeline {
                 grid-template-columns: 1fr;
             }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+
+        /* Notion-like interactive elements */
+        .interactive-element {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .interactive-element:hover {
+            background: var(--notion-gray-bg);
+        }
+
+        /* Document navigation */
+        .document-nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 300px;
+            background: var(--notion-bg);
+            padding: 20px;
+            border-right: 1px solid var(--notion-gray-bg);
+            overflow-y: auto;
+        }
+
+        .document-content {
+            margin-left: 300px;
+            padding: 40px;
+        }
+
+        @media (max-width: 1024px) {
+            .document-nav {
+                display: none;
+            }
+            
+            .document-content {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🌱 Hemp Squad</h1>
-        <p class="subtitle">Bringing Heaven to Earth</p>
+    <div class="document-nav">
+        <h3>Table of Contents</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li><a href="#vision" style="text-decoration: none; color: var(--notion-text);">Vision</a></li>
+            <li><a href="#team" style="text-decoration: none; color: var(--notion-text);">Team</a></li>
+            <li><a href="#pillars" style="text-decoration: none; color: var(--notion-text);">Pillars</a></li>
+            <li><a href="#tech" style="text-decoration: none; color: var(--notion-text);">Technology</a></li>
+            <li><a href="#timeline" style="text-decoration: none; color: var(--notion-text);">Timeline</a></li>
+            <li><a href="#values" style="text-decoration: none; color: var(--notion-text);">Values</a></li>
+        </ul>
     </div>
 
-    <div class="vision">
-        <h2>Our Vision</h2>
-        <p>A world where hemp-based solutions form the foundation of modern living, creating a regenerative cycle that benefits all beings.</p>
-    </div>
+    <div class="document-content">
+        <div class="header">
+            <h1>🌱 Hemp Squad</h1>
+            <p class="subtitle">Bringing Heaven to Earth</p>
+        </div>
 
-    <h2>The Team</h2>
-    <div class="team-grid">
-        <div class="team-member">
-            <h3>Hemphrey Ford</h3>
-            <p>Strategic Visionary • F-16 Pilot • Environmental Crusader</p>
-        </div>
-        <div class="team-member">
-            <h3>Eddie Dunn Jr.</h3>
-            <p>H.E.M.P. Drive Inventor • Earth Healer</p>
-        </div>
-        <div class="team-member">
-            <h3>Johnny Rapp</h3>
-            <p>Visionary Leader • Community Builder</p>
-        </div>
-        <div class="team-member">
-            <h3>Jamal Lilly</h3>
-            <p>Agricultural Expert • Land Steward</p>
-        </div>
-        <div class="team-member">
-            <h3>Evan</h3>
-            <p>Beekeeping Specialist • Environmental Advocate</p>
-        </div>
-        <div class="team-member">
-            <h3>Jose Urizar</h3>
-            <p>DTE Materials Founder • Clearwash™ Pioneer</p>
-        </div>
-    </div>
+        <div class="container">
+            <div class="document-section" id="vision">
+                <h2>Our Vision</h2>
+                <p>A world where hemp-based solutions form the foundation of modern living, creating a regenerative cycle that benefits all beings.</p>
+            </div>
 
-    <h2>Our Pillars</h2>
-    <div class="pillars">
-        <div class="pillar">
-            <h3>🏗️ Building</h3>
-            <p>DTE Materials • Hempcrete • Sustainable Housing</p>
-        </div>
-        <div class="pillar">
-            <h3>⚡ Energy</h3>
-            <p>H.E.M.P. Drive • H85 Biofuel • Aviation Solutions</p>
-        </div>
-        <div class="pillar">
-            <h3>🌍 Environment</h3>
-            <p>Carbon Negative • Bee Conservation • Urban Farming</p>
-        </div>
-    </div>
+            <div class="document-section" id="team">
+                <h2>The Team</h2>
+                <div class="team-grid">
+                    <div class="team-member interactive-element">
+                        <h3>Hemphrey Ford</h3>
+                        <p>Strategic Visionary • F-16 Pilot • Environmental Crusader</p>
+                    </div>
+                    <div class="team-member interactive-element">
+                        <h3>Eddie Dunn Jr.</h3>
+                        <p>H.E.M.P. Drive Inventor • Earth Healer</p>
+                    </div>
+                    <div class="team-member interactive-element">
+                        <h3>Johnny Rapp</h3>
+                        <p>Visionary Leader • Community Builder</p>
+                    </div>
+                    <div class="team-member interactive-element">
+                        <h3>Jamal Lilly</h3>
+                        <p>Agricultural Expert • Land Steward</p>
+                    </div>
+                    <div class="team-member interactive-element">
+                        <h3>Evan</h3>
+                        <p>Beekeeping Specialist • Environmental Advocate</p>
+                    </div>
+                    <div class="team-member interactive-element">
+                        <h3>Jose Urizar</h3>
+                        <p>DTE Materials Founder • Clearwash™ Pioneer</p>
+                    </div>
+                </div>
+            </div>
 
-    <h2>Technology & Innovation</h2>
-    <div class="tech-grid">
-        <div class="tech-card">
-            <h3>Clearwash™ Process</h3>
-            <ul>
-                <li>Biomass Conversion</li>
-                <li>1B Tons Annual Processing</li>
-                <li>Zero Waste Solution</li>
-            </ul>
-        </div>
-        <div class="tech-card">
-            <h3>H.E.M.P. Drive</h3>
-            <ul>
-                <li>H85 Biofuel Blend</li>
-                <li>Smart Retrofit System</li>
-                <li>Carbon Negative Production</li>
-            </ul>
-        </div>
-    </div>
+            <div class="document-section" id="pillars">
+                <h2>Our Pillars</h2>
+                <div class="pillars">
+                    <div class="pillar interactive-element">
+                        <h3>🏗️ Building</h3>
+                        <p>DTE Materials • Hempcrete • Sustainable Housing</p>
+                    </div>
+                    <div class="pillar interactive-element">
+                        <h3>⚡ Energy</h3>
+                        <p>H.E.M.P. Drive • H85 Biofuel • Aviation Solutions</p>
+                    </div>
+                    <div class="pillar interactive-element">
+                        <h3>🌍 Environment</h3>
+                        <p>Carbon Negative • Bee Conservation • Urban Farming</p>
+                    </div>
+                </div>
+            </div>
 
-    <h2>Implementation Timeline</h2>
-    <div class="timeline">
-        <div class="phase">
-            <h3>Phase 1</h3>
-            <p>1-3 Months</p>
-            <ul>
-                <li>Team Building</li>
-                <li>Brand Development</li>
-                <li>Initial Planning</li>
-            </ul>
-        </div>
-        <div class="phase">
-            <h3>Phase 2</h3>
-            <p>3-6 Months</p>
-            <ul>
-                <li>Pilot Projects</li>
-                <li>Product Testing</li>
-                <li>Policy Advocacy</li>
-            </ul>
-        </div>
-        <div class="phase">
-            <h3>Phase 3</h3>
-            <p>6-12 Months</p>
-            <ul>
-                <li>Large-Scale Implementation</li>
-                <li>Global Expansion</li>
-                <li>Foundation Launch</li>
-            </ul>
-        </div>
-    </div>
+            <div class="document-section" id="tech">
+                <h2>Technology & Innovation</h2>
+                <div class="tech-grid">
+                    <div class="tech-card interactive-element">
+                        <h3>Clearwash™ Process</h3>
+                        <ul>
+                            <li>Biomass Conversion</li>
+                            <li>1B Tons Annual Processing</li>
+                            <li>Zero Waste Solution</li>
+                        </ul>
+                    </div>
+                    <div class="tech-card interactive-element">
+                        <h3>H.E.M.P. Drive</h3>
+                        <ul>
+                            <li>H85 Biofuel Blend</li>
+                            <li>Smart Retrofit System</li>
+                            <li>Carbon Negative Production</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-    <h2>Our Values</h2>
-    <div class="values">
-        <span class="value-tag">Sustainability</span>
-        <span class="value-tag">Innovation</span>
-        <span class="value-tag">Community</span>
-        <span class="value-tag">Education</span>
-        <span class="value-tag">Environmental Stewardship</span>
-        <span class="value-tag">Spiritual Connection</span>
-        <span class="value-tag">Collaboration</span>
-        <span class="value-tag">Carbon-Negative Future</span>
-        <span class="value-tag">Regenerative Living</span>
-        <span class="value-tag">Authenticity</span>
-        <span class="value-tag">Advocacy</span>
-        <span class="value-tag">Veteran Support</span>
-    </div>
+            <div class="document-section" id="timeline">
+                <h2>Implementation Timeline</h2>
+                <div class="timeline">
+                    <div class="phase interactive-element">
+                        <h3>Phase 1</h3>
+                        <p>1-3 Months</p>
+                        <ul>
+                            <li>Team Building</li>
+                            <li>Brand Development</li>
+                            <li>Initial Planning</li>
+                        </ul>
+                    </div>
+                    <div class="phase interactive-element">
+                        <h3>Phase 2</h3>
+                        <p>3-6 Months</p>
+                        <ul>
+                            <li>Pilot Projects</li>
+                            <li>Product Testing</li>
+                            <li>Policy Advocacy</li>
+                        </ul>
+                    </div>
+                    <div class="phase interactive-element">
+                        <h3>Phase 3</h3>
+                        <p>6-12 Months</p>
+                        <ul>
+                            <li>Large-Scale Implementation</li>
+                            <li>Global Expansion</li>
+                            <li>Foundation Launch</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-    <div class="cta">
-        <h2>Ready to Make a Difference?</h2>
-        <p>Contact us to explore partnership opportunities and join our growing community of changemakers.</p>
-        <p style="font-style: italic;">"Bringing heaven to earth through sustainable innovation, advanced materials, clean energy, advocacy, and community connection."</p>
-    </div>
+            <div class="document-section" id="values">
+                <h2>Our Values</h2>
+                <div class="values">
+                    <span class="value-tag">Sustainability</span>
+                    <span class="value-tag">Innovation</span>
+                    <span class="value-tag">Community</span>
+                    <span class="value-tag">Education</span>
+                    <span class="value-tag">Environmental Stewardship</span>
+                    <span class="value-tag">Spiritual Connection</span>
+                    <span class="value-tag">Collaboration</span>
+                    <span class="value-tag">Carbon-Negative Future</span>
+                    <span class="value-tag">Regenerative Living</span>
+                    <span class="value-tag">Authenticity</span>
+                    <span class="value-tag">Advocacy</span>
+                    <span class="value-tag">Veteran Support</span>
+                </div>
+            </div>
 
-    <div class="footer">
-        <p>Design inspired by nature's harmony and the power of community</p>
+            <div class="document-section cta">
+                <h2>Ready to Make a Difference?</h2>
+                <p>Contact us to explore partnership opportunities and join our growing community of changemakers.</p>
+                <p style="font-style: italic;">"Bringing heaven to earth through sustainable innovation, advanced materials, clean energy, advocacy, and community connection."</p>
+            </div>
+
+            <div class="footer">
+                <p>Design inspired by nature's harmony and the power of community</p>
+            </div>
+        </div>
     </div>
 </body>
 </html> 
