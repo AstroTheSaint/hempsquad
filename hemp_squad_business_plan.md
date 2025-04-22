@@ -11,7 +11,7 @@ To create a world where sustainable hemp-based solutions are the foundation of m
 - **Eddie Dunn**: Experienced in sustainable practices and environmental solutions
 - **Johnny Rapp**: Visionary leader and community builder
 - **Jamal Lilly**: Agricultural expert with extensive land and resource management experience
-- **Eben**: Beekeeping specialist and environmental advocate
+- **Evan**: Beekeeping specialist and environmental advocate
 
 ## Key Initiatives
 
