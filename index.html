@@ -83,6 +83,44 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
+        .document-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 15px 0;
+        }
+
+        .document-section ul li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 8px;
+            color: var(--notion-text);
+        }
+
+        .document-section ul li:before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: var(--notion-gray);
+            font-size: 1.2em;
+        }
+
+        .document-section ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        .tech-card ul li,
+        .phase ul li {
+            padding-left: 20px;
+            margin-bottom: 6px;
+            font-size: 0.95em;
+        }
+
+        .tech-card ul li:before,
+        .phase ul li:before {
+            left: 4px;
+            font-size: 1.1em;
+        }
+
         h2 {
             font-size: 1.8em;
             font-weight: 600;
